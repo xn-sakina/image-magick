@@ -1,0 +1,48 @@
+{
+  "name": "@xn-sakina/image-magick",
+  "version": "1.0.0",
+  "description": "Easy use WASM-ImageMagick process image utils for webpack",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "fz6m",
+  "homepage": "https://github.com/xn-sakina/image-magick#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xn-sakina/image-magick"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ImageMagick",
+    "WASM-ImageMagick",
+    "wasm",
+    "webassembly"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "build:pack": "swno ./scripts/build.ts",
+    "transform:wasm": "swno ./scripts/transformWasm.ts",
+    "prepublishOnly": "npm run build:pack",
+    "push": "npm publish --registry=https://registry.npmjs.com/"
+  },
+  "devDependencies": {
+    "@fz6m/eslint-plugin-sakina": "^1.0.6",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "swno": "^1.0.2",
+    "typescript": "^4.5.4",
+    "zx": "^4.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
