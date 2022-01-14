@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const [newUrl, setNewUrl] = useState('')
 
   const lookGifInfo = useCallback(async () => {
-    const { buildInputFile, execute } = await import('../../../dist')
+    const { buildInputFile, execute } = await import('@xn-sakina/image-magick')
     const { stdout, stderr, exitCode, outputFiles } = await execute({
       inputFiles: [await buildInputFile(imgUrl, 'image.gif')],
       commands: [
