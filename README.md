@@ -2,7 +2,7 @@
 
 Easy use [WASM-ImageMagick](https://github.com/KnicKnic/WASM-ImageMagick) process image utils for webpack.
 
-> Not need care about wasm load process
+> *Not need care about wasm load process*
 
 ## Install
 
